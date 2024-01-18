@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the red-app JAR file into the container at /app
-COPY red-app.jar /app/red-app.jar
+EXPOSE 8080
 
 # Specify the command to run on container startup
 CMD ["java", "-jar", "red-app.jar"]
