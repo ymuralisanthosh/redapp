@@ -18,7 +18,19 @@
     <properties>
         <java.version>11</java.version>
     </properties>
-
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>ip-172-31-14-113-releases</name>
+        <url>http://13.201.102.58:8081/artifactory/application</url>
+    </repository>
+    <snapshotRepository>
+        <id>central</id>
+        <name>ip-172-31-14-113-snapshots</name>
+        <url>http://13.201.102.58:8081/artifactory/application</url>
+    </snapshotRepository>
+</distributionManagement>
+         
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
