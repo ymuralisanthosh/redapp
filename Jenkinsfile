@@ -92,8 +92,7 @@ pipeline {
                         def buildTag = env.BUILD_NUMBER
 
                         // Tag the Docker image
-                        sh "docker tag ${DOCKER_IMAGE_NAME}:latest ${ECR_REPO_URL}:${buildTag}"
-
+                        sh "docker tag ${ECR_REPO_URL}:${buildTag} ${ECR_REPO_URL}:latest"
                         // Push the Docker image to ECR
                         sh "docker push ${ECR_REPO_URL}:${buildTag}"
                     }
