@@ -104,7 +104,7 @@ pipeline {
                 script {
                     sh "git clone https://github.com/ymuralisanthosh/helm-charts-assignment.git"
                     // Deploy the RedApp application
-                    sh "helm upgrade --install redapp k8s-helm-charts/redapp"
+                    sh "helm upgrade --install redapp helm-charts-assignment/redapp"
                 }
             }
         }
